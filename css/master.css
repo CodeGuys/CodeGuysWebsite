@@ -1,6 +1,12 @@
+:root {
+  --bgColor: #111;
+  --fgColor: #CCC;
+  --boldColor: #FFF;
+}
+
 body {
   font-family: "Segoe UI";
-  background-color: #111;
+  background-color: var(--bgColor);
   font-weight: lighter;
   color: #CCC;
 }
@@ -10,4 +16,38 @@ h1,h2,h3,h4,h5,h6,b,th {
   color: white;
 }
 
-div.flex { display: flex; }
+/* Navbar */
+.navbar {
+  display: flex;
+  box-orient: horizontal;
+  width: 100%;
+  border: 1px solid var(--fgColor);
+  border-radius: 50vh;
+}
+.navbar a, .navbar a:link {
+  text-decoration: none;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+  color: var(--fgColor);
+  height: inherit;
+  width: 100%;
+  text-align: center;
+  border-left: 1px solid white;
+}
+.navbar a.start {
+  border-left: none;
+  padding-left: 0.8em;
+}
+.navbar a.end {
+  padding-left: 0.8em;
+}
+.navbar a:hover {
+  text-shadow: 0px 0px 15px white;
+  box-shadow: 0px 0px 15px white;
+}
+.navbar a:visited {
+  color: #CCF;
+}
+.navbar a:active {
+  color: #CFF;
+}
